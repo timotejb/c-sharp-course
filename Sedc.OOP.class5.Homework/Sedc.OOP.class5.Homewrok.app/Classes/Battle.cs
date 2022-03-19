@@ -6,15 +6,10 @@ namespace Sedc.OOP.class5.Homewrok.app.Classes
 {
     class Battle
     {
-        public static bool Calculate (int n1, int n2)
+        public static bool Calculate(CanBattle entity, CanBattle entity1)
         {
-            if (n1 > n2)
-            {
-                return true;
-            }
-            else
-                return false;
+
+            return entity.PowerLevel > entity1.PowerLevel;
         }
-        
     }
 }

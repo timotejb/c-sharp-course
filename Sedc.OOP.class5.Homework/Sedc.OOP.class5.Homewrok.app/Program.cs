@@ -1,5 +1,5 @@
-﻿using System;
-using Sedc.OOP.class5.Homewrok.app.Classes;
+﻿using Sedc.OOP.class5.Homewrok.app.Classes;
+using System;
 namespace Sedc.OOP.class5.Homewrok.app
 {
     class Program
@@ -45,18 +45,31 @@ namespace Sedc.OOP.class5.Homewrok.app
             };
 
             //Battle begins
-            if (creatures[1].Status == false) //if the creature is untamed
+
+            foreach (Wizards wizard in wizards)
             {
-                if (Battle.Calculate(wizards[0].PowerLevel, creatures[1].PowerLevel)) //the duel
+                foreach (Creatures creature in creatures)
                 {
-                    Console.WriteLine($"The wizard {wizards[0].Name} won, and the {creatures[1].Name} has been tamed!");
-                    creatures[1].Status = true; //taming the creautre
+                    if (creature.Status == false) //if the creature is untamed
+                    {
+                        if (Battle.Calculate(wizard, creature)) //the duel
+                        {
+                            Console.WriteLine($"The wizard {wizard.Name} won, and the {creature.Name} has been tamed!");
+                            creature.Status = true; //taming the creautre
+                        }
+                        else
+                            Console.WriteLine($"The wizard {wizard.Name} lost his HP, the {creature.Name} won.");
+                    }
                 }
-                else
-                    Console.WriteLine($"The wizard {wizards[0].Name} lost his HP, the {creatures[1].Name} won.");
             }
 
-
+            foreach (Creatures creature in creatures)
+            {
+                if (!creature.Status)
+                {
+                    Console.WriteLine($"{creature.Name} was undefeated");
+                }
+            }
         }
     }
 }
