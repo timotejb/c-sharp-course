@@ -9,6 +9,11 @@ namespace Sedc.OOP.Class7.Enumerations.App
         {
             Administrator admin = new Administrator("Bob");
             admin.Role = Roles.SuperGuest;
+
+            //parsiranje integer vo enum
+            bool isValid = Enum.TryParse(typeof(Roles), "2", out object role); //na "role" mu ja zadavame vrednosta "2"(Admin
+                                                                               //) od "Roles"
+            Console.WriteLine(role);
             Console.WriteLine(admin);
         }
     }

@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Sedc.OOP.Class7.ClassLibrary\Sedc.OOP.Class7.ClassLibrary.csproj" />
+    <ProjectReference Include="..\Sedc.OOP.Class7.Models\Sedc.OOP.Class7.Models.csproj" />
+    <ProjectReference Include="..\Sedc.OOP.Class7.Services\Sedc.OOP.Class7.Services.csproj" />
+  </ItemGroup>
+
+</Project>
