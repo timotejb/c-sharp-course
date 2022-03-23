@@ -22,5 +22,10 @@ namespace Sedc.OOP.Class7.Inheritance.App.Models
             Race = race;
             Console.WriteLine("A new instance of Animal has been created, by  the Animal constructor");
         }
+        public virtual void Eat()
+        {
+            Console.WriteLine($"the animal {Type}, named {Name}, is eating");
+        }
+         
     }
 }
