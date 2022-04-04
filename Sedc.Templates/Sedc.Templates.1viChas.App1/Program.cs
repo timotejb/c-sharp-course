@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Sedc
+namespace Sedc.Templates._1viChas.App1
 {
     class Program
     {
